@@ -3,7 +3,7 @@ return {
 		"williamboman/mason.nvim",
 		opts = function(_, opts)
 			opts.registries = {
-				"lua:user/utils/custom-registry",
+				"lua:bundle_plugins/custom-registry",
 				"github:mason-org/mason-registry",
 			}
 		end,
