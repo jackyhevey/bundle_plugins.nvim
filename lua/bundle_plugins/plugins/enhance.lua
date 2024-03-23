@@ -18,6 +18,9 @@ return {
 	},
 	{
 		"yianwillis/vimcdoc",
+		init = function()
+			vim.o.helplang = "cn"
+		end,
 		lazy = true,
 		build = 'sh vimcdoc.sh -i && python3 -c "$(curl -fsSL https://gitee.com/hevey88/a4_user/raw/main/utils/vimdoc_install_mac.py)"',
 	},
