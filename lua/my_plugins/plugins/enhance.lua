@@ -7,7 +7,7 @@ return {
 			or "./dl_binaries.sh",
 		cmd = { "TabnineStatus", "TabnineDisable", "TabnineEnable", "TabnineToggle" },
 		event = "User AstroFile",
-		opts = { accept_keymap = "<C-y>" },
+		opts = { accept_keymap = "<C-e>" },
 	},
 	{
 		-- tab key to move cursor cross chars
