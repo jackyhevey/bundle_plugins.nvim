@@ -29,9 +29,9 @@ return {
   {
     "echasnovski/mini.surround",
     keys = function(_, keys)
-      local maps = { n = {} }
-      maps.n["gs"] = { desc = "Surround" }
-      require("astronvim.utils").set_mappings(maps)
+      -- local maps = { n = {} }
+      -- maps.n["gs"] = { desc = "Surround" }
+      -- require("astronvim.utils").set_mappings(maps)
       -- Populate the keys based on the user's options
       local plugin = require("lazy.core.config").spec.plugins["mini.surround"]
       local opts = require("lazy.core.plugin").values(plugin, "opts", false)
@@ -99,7 +99,7 @@ return {
     build = vim.loop.os_uname().sysname == "Windows_NT" and "powershell.exe -file .\\dl_binaries.ps1"
       or "./dl_binaries.sh",
     cmd = { "TabnineStatus", "TabnineDisable", "TabnineEnable", "TabnineToggle" },
-    event = "User AstroFile",
+    event = "InsertEnter",
     opts = { accept_keymap = "<C-e>" },
   },
   {
