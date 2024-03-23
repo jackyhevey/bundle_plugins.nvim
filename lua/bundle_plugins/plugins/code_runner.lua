@@ -5,17 +5,17 @@ local prefix = "<leader>r"
 -- require("astronvim.utils").set_mappings(maps)
 
 return {
-	"CRAG666/code_runner.nvim",
-	event = "User AstroFile",
-	keys = {
-		{ mode = { "n", "v" }, "<leader>rf", "<cmd>RunFile<CR>", desc = "RunFile" },
-		{ mode = { "n", "v" }, "<leader>rc", "<cmd>wincmd j | RunClose<CR>", desc = "RunClose" },
-	},
-	opts = {
-		focus = false,
-		filetype = {
-			python = "python3 -u",
-			lua = "lua",
-		},
-	},
+  "CRAG666/code_runner.nvim",
+  event = "User AstroFile",
+  keys = {
+    { mode = { "n", "v" }, "<leader>rf", "<cmd>RunFile<CR>", desc = "RunFile" },
+    { mode = { "n", "v" }, "<leader>rc", "<cmd>wincmd j | RunClose<CR>", desc = "RunClose" },
+  },
+  opts = {
+    focus = false,
+    filetype = {
+      python = "python3 -u",
+      lua = "lua",
+    },
+  },
 }
