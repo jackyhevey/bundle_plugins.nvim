@@ -2,10 +2,10 @@ return {
 	{
 		"williamboman/mason.nvim",
 		opts = function(_, opts)
-			opts.registries = require("astronvim.utils").list_insert_unique(opts.registries, {
+			opts.registries = {
 				"lua:user/utils/custom-registry",
 				"github:mason-org/mason-registry",
-			})
+			}
 		end,
 	},
 	{
