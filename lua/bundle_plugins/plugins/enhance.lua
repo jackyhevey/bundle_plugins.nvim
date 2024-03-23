@@ -92,16 +92,16 @@ return {
   --     },
   --   },
   -- },
-  {
-    "codota/tabnine-nvim",
-    main = "tabnine",
-    enabled = vim.loop.os_uname().sysname ~= "Linux",
-    build = vim.loop.os_uname().sysname == "Windows_NT" and "powershell.exe -file .\\dl_binaries.ps1"
-      or "./dl_binaries.sh",
-    cmd = { "TabnineStatus", "TabnineDisable", "TabnineEnable", "TabnineToggle" },
-    event = "InsertEnter",
-    opts = { accept_keymap = "<C-e>" },
-  },
+  -- {
+  --   "codota/tabnine-nvim",
+  --   main = "tabnine",
+  --   enabled = vim.loop.os_uname().sysname ~= "Linux",
+  --   build = vim.loop.os_uname().sysname == "Windows_NT" and "powershell.exe -file .\\dl_binaries.ps1"
+  --     or "./dl_binaries.sh",
+  --   cmd = { "TabnineStatus", "TabnineDisable", "TabnineEnable", "TabnineToggle" },
+  --   event = "InsertEnter",
+  --   opts = { accept_keymap = "<C-e>" },
+  -- },
   {
     -- tab key to move cursor cross chars
     "lilibyte/tabhula.nvim",
@@ -109,19 +109,19 @@ return {
     event = "InsertEnter",
     opts = {},
   },
-  {
-    "johmsalas/text-case.nvim",
-    lazy = true,
-    keys = {
-      {
-        mode = { "n", "v" },
-        "gat",
-        function() require("textcase").operator "to_title_case" end,
-        desc = "word title_case",
-      },
-    },
-    config = function() require("textcase").setup {} end,
-  },
+  -- {
+  --   "johmsalas/text-case.nvim",
+  --   lazy = true,
+  --   keys = {
+  --     {
+  --       mode = { "n", "v" },
+  --       "gat",
+  --       function() require("textcase").operator "to_title_case" end,
+  --       desc = "word title_case",
+  --     },
+  --   },
+  --   config = function() require("textcase").setup {} end,
+  -- },
   {
     "kana/vim-textobj-entire",
     lazy = true,
