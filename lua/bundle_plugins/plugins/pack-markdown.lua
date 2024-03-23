@@ -1,7 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    optional = true,
+    -- optional = true,
     opts = function(_, opts)
       if opts.ensure_installed ~= "all" then
         opts.ensure_installed =
@@ -11,14 +11,14 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    optional = true,
+    -- optional = true,
     opts = function(_, opts)
       opts.ensure_installed = require("bundle_plugins").list_insert_unique(opts.ensure_installed, { "marksman" })
     end,
   },
   {
     "jay-babu/mason-null-ls.nvim",
-    optional = true,
+    -- optional = true,
     opts = function(_, opts)
       opts.ensure_installed = require("bundle_plugins").list_insert_unique(opts.ensure_installed, { "prettierd" })
     end,
