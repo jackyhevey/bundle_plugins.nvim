@@ -13,7 +13,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     -- optional = true,
     opts = function(_, opts)
-      opts.ensure_installed = require("bundle_plugins").list_insert_unique(opts.ensure_installed, { "marksman" })
+      -- opts.ensure_installed = require("bundle_plugins").list_insert_unique(opts.ensure_installed, { "marksman" })
     end,
   },
   {
