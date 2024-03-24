@@ -35,7 +35,8 @@ return {
         desc = "Open Markdown Preview",
       },
     },
-    build = function() vim.fn["mkdp#util#install"]() end,
+    -- build = function() vim.fn["mkdp#util#install"]() end,
+    build = "cd app && yarn install",
   },
   -- {
   --   "TobinPalmer/pastify.nvim",
