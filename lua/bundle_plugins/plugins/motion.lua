@@ -67,7 +67,7 @@ return {
   },
   {
     "chentoast/marks.nvim",
-    event = "BufEnter",
+    event = "BufReadPost",
     opts = {
       excluded_filetypes = {
         "qf",

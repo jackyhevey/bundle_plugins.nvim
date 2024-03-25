@@ -2,7 +2,7 @@ return {
   {
     "folke/todo-comments.nvim",
     opts = {},
-    event = "BufEnter",
+    event = "BufReadPost",
     cmd = { "TodoTrouble", "TodoTelescope", "TodoLocList", "TodoQuickFix" },
   },
 }
