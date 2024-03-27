@@ -21,7 +21,7 @@ return {
     "keaising/im-select.nvim",
     main = "im_select",
     build = '/bin/bash -c "$(curl -fsSL https://gitee.com/hevey88/im-select/raw/master/install_mac.sh)"',
-    enabled = vim.loop.os_uname().sysname == "Darwin",
+    enabled = vim.fn.has "mac" == 1,
     event = "VimEnter",
     opts = {
       set_previous_events = {},
