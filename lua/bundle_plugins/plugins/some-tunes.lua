@@ -18,17 +18,6 @@ return {
     end,
   },
   {
-    "keaising/im-select.nvim",
-    main = "im_select",
-    build = '/bin/bash -c "$(curl -fsSL https://gitee.com/hevey88/im-select/raw/master/install_mac.sh)"',
-    enabled = vim.fn.has "mac" == 1,
-    event = "VimEnter",
-    opts = {
-      set_previous_events = {},
-      -- set_default_events = { "VimEnter", "InsertLeave", "CmdlineLeave" }
-    },
-  },
-  {
     "hrsh7th/nvim-cmp",
     opts = {
       completion = {
