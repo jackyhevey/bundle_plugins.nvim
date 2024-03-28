@@ -6,7 +6,7 @@ local prefix = "<leader>r"
 
 return {
   "CRAG666/code_runner.nvim",
-  event = "User AstroFile",
+  event = "VeryLazy",
   keys = {
     { mode = { "n", "v" }, "<leader>rf", "<cmd>RunFile<CR>", desc = "RunFile" },
     { mode = { "n", "v" }, "<leader>rc", "<cmd>wincmd j | RunClose<CR>", desc = "RunClose" },
