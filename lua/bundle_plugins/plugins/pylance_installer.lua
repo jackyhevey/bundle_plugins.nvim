@@ -12,8 +12,7 @@ return {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     cmd = { "MasonToolsInstall", "MasonToolsUpdate", "MasonToolsClean" },
     dependencies = { "williamboman/mason.nvim" },
-    -- init = function(plugin) require("astronvim.utils").load_plugin_with_func("mason.nvim", plugin.name) end,
-    ft = "python",
+    init = function(plugin) require("bundle_plugins").on_load("mason.nvim", plugin.name) end,
     opts = {
       ensure_installed = {
         { "pylance", version = "2023.12.101" }, -- last known working version
