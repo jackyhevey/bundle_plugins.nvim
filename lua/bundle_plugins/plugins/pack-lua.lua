@@ -1,6 +1,15 @@
 local utils = require "bundle_plugins"
 return {
   {
+    "AstroNvim/astrolsp",
+    optional = true,
+    opts = {
+      config = {
+        lua_ls = { settings = { Lua = { hint = { enable = true, arrayIndex = "Disable" } } } },
+      },
+    },
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     optional = true,
     opts = function(_, opts)
@@ -17,7 +26,9 @@ return {
   {
     "jay-babu/mason-null-ls.nvim",
     optional = true,
-    opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "stylua" }) end,
+    opts = function(_, opts)
+      opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "stylua", "selene" })
+    end,
   },
   -- {
   --   "AstroNvim/astrolsp",
