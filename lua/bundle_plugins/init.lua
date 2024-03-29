@@ -220,20 +220,20 @@ end
 --
 -- --- A placeholder variable used to queue section names to be registered by which-key
 -- ---@type table?
--- M.which_key_queue = nil
---
--- --- Register queued which-key mappings
--- function M.which_key_register()
---   if M.which_key_queue then
---     local wk_avail, wk = pcall(require, "which-key")
---     if wk_avail then
---       for mode, registration in pairs(M.which_key_queue) do
---         wk.register(registration, { mode = mode })
---       end
---       M.which_key_queue = nil
---     end
---   end
--- end
+M.which_key_queue = nil
+
+--- Register queued which-key mappings
+function M.which_key_register()
+  if M.which_key_queue then
+    local wk_avail, wk = pcall(require, "which-key")
+    if wk_avail then
+      for mode, registration in pairs(M.which_key_queue) do
+        wk.register(registration, { mode = mode })
+      end
+      M.which_key_queue = nil
+    end
+  end
+end
 --
 -- --- Get an empty table of mappings with a key for each map mode
 -- ---@return table<string,table> # a table with entries for each map mode
