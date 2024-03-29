@@ -23,21 +23,21 @@ return {
       opts.ensure_installed = require("bundle_plugins").list_insert_unique(opts.ensure_installed, { "prettier" })
     end,
   },
-  {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    keys = {
-      {
-        mode = { "n", "v" },
-        "<leader>ze",
-        "<cmd>MarkdownPreview<CR>",
-        desc = "Open Markdown Preview",
-      },
-    },
-    -- build = function() vim.fn["mkdp#util#install"]() end,
-    build = "cd app && yarn install",
-  },
+  -- {
+  --   "iamcco/markdown-preview.nvim",
+  --   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  --   ft = { "markdown" },
+  --   keys = {
+  --     {
+  --       mode = { "n", "v" },
+  --       "<leader>ze",
+  --       "<cmd>MarkdownPreview<CR>",
+  --       desc = "Open Markdown Preview",
+  --     },
+  --   },
+  --   -- build = function() vim.fn["mkdp#util#install"]() end,
+  --   build = "cd app && yarn install",
+  -- },
   -- {
   --   "TobinPalmer/pastify.nvim",
   --   cmd = { "Pastify" },
